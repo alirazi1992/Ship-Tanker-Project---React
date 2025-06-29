@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === GLOBAL STYLES === */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0f2f1;
+}
+
+/* === ANIMATIONS === */
+@keyframes flow {
+  0% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
+}
+
+/* === TEXT & HEADINGS === */
+h1, h2, h3 {
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* === UNIVERSAL BUTTONS === */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* === FUEL TRANSFER BUTTON === */
+.fuel-button {
+  background: linear-gradient(145deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+.fuel-button:hover {
+  background: linear-gradient(145deg, #20e3b2, #29ffc6);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* === MODAL TITLE === */
+.modal-title {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff;
+  margin-bottom: 1rem;
+}
+
+/* === INPUT FIELDS & SELECTS === */
+input, select {
+  background-color: #111827;
+  color: #e0f2f1;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #00bcd4;
+  box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #00ffe0;
+  box-shadow: 0 0 10px #00ffe0;
+}
+
+/* === ANIMATED LINE (Optional) === */
+.animated-line {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+  animation: flow 1s infinite alternate;
+}
+
+/* === SCROLLBAR CUSTOMIZATION (Optional) === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.5);
+}
+
+/* === Fuel Transfer Beam Animation === */
+.transfer-beam {
+  width: 200px;
+  height: 8px;
+  background: linear-gradient(90deg, #00fff7, #00c9ff, #0072ff);
+  border-radius: 9999px;
+  animation: beamFlow 1s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes beamFlow {
+  0% {
+    transform: translateX(-20px) scaleX(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(20px) scaleX(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-20px) scaleX(0.8);
+    opacity: 0.6;
+  }
+}
+
+
