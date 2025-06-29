@@ -196,8 +196,6 @@ Fuel transfer in action
 
 Night-mode fuel meter glowing
 
-![Dashboard Screenshot](/Users/alirazi/Desktop/Screenshot 2025-06-29 at 12.34.49 PM)
-
 
 ## 🧠 Developer Notes
 
