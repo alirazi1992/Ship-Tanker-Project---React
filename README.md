@@ -190,6 +190,8 @@ cd ship-fuel-pro
 ## 🖼️ Screenshots** 
 
 <img src="https://raw.githubusercontent.com/alirazi1992/Ship-Tanker-Project---React/main/public/Screenshot.png" width="100%" alt="App Screenshot" />
+<img src="https://raw.githubusercontent.com/alirazi1992/Ship-Tanker-Project---React/main/public/Screenshot2.png" width="100%" alt="App Screenshot" />
+
 
 
 ## 🧠 Developer Notes
