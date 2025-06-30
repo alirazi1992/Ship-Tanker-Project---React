@@ -1,44 +1,35 @@
 import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 function FuelGauge({ data, colors }) {
-  // Convert data object to array format for chart
-  const chartData = Object.entries(data).map(([type, value]) => ({
-    name: type,
+  const chartData = Object.entries(data).map(([key, value]) => ({
+    name: key,
     value: value,
   }));
 
+  const colorList = Object.entries(data).map(([key]) => colors[key]);
+
   return (
-    <div className="w-full h-full">
-      <ResponsiveContainer width="100%" height={200}>
-        <PieChart>
-          <Pie
-            data={chartData}
-            dataKey="value"
-            cx="50%"
-            cy="50%"
-            innerRadius={50}
-            outerRadius={80}
-            startAngle={90}
-            endAngle={-270}
-            paddingAngle={3}
-            isAnimationActive={true}
-          >
-            {chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[entry.name]} />
-            ))}
-          </Pie>
-          <Tooltip
-            contentStyle={{
-              backgroundColor: "#1e293b",
-              border: "none",
-              borderRadius: "10px",
-              color: "#e0f2f1",
-              fontSize: "0.875rem",
-            }}
-          />
-        </PieChart>
-      </ResponsiveContainer>
+    <div style={{ width: 200, height: 200 }}>
+      <PieChart width={200} height={200}>
+        <Pie
+          data={chartData}
+          dataKey="value"
+          innerRadius={60}
+          outerRadius={80}
+          paddingAngle={2}
+          isAnimationActive={true}
+        >
+          {chartData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colorList[index]} stroke="#000" />
+          ))}
+        </Pie>
+        <Tooltip
+          contentStyle={{ backgroundColor: "#111827", border: "none", borderRadius: 10 }}
+          itemStyle={{ color: "#ffffff", fontWeight: "bold" }}
+          formatter={(value, name) => [`${value}`, `${name}`]}
+        />
+      </PieChart>
     </div>
   );
 }
