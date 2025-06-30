@@ -187,14 +187,9 @@ cd ship-fuel-pro
   - Integration with engine sensors and external APIs
 
 
-## 🖼️ Screenshots** (To Be Added Soon)
-You can capture the following:
+## 🖼️ Screenshots** 
 
-Dashboard view with all tankers
-
-Fuel transfer in action
-
-Night-mode fuel meter glowing
+<img src="https://raw.githubusercontent.com/alirazi1992/Ship-Tanker-Project---React/main/public/Screenshot.png" width="100%" alt="App Screenshot" />
 
 
 ## 🧠 Developer Notes
